@@ -1,0 +1,151 @@
+<!--
+    note : 
+
+        // part 1
+        1. element selector -> direct tag er nam likhe style kora
+        2. id selector -> id atribute a value hisabe id name
+        3. class selector -> class atribute a value hisabe class name
+        4. multiple class or id use
+
+        // part 2 
+        1. universal selector -> etar jonno * sign
+            -> universal selector sobaike select kore and sobar jonno kaj kore 
+            -> universal selector er help niye merging and padding 0 rakha hoy
+
+        // part 3
+        1. grouping selector -> ek e doroner kaj different element e eksathe kora jay
+
+        // part 4
+        1. combinators -> selector er moddhe relation create korte help kore
+            1. descendent selctor : user just jake caibe take use korbe jemon div er 
+                descendent gulake just color kora holo green , but div er bairer ta color hobe na
+            2. child selector :  ektu keyal korle dekha jay div er vitore child hocche 
+                prothom duita p tag but arekti p hocche indirect child . amra bolte pari child na 
+                so user jodi chay just div er moddhe direct child gula use korte tahole evabe likhte hobe
+                div > j tag gula child like : div > p, just child color hobe indirect ta hobena
+            3. adjacence sibling selector : syntax : div + p
+                # div er immidiate j ace tar upor use hooy .. jemon div er pore thaka p tag 
+            4. general sibling selector : div er por thaka j tag ke style korte cai. sobar jonno kaj korbe jemon div er por duita p tah e kaj korce
+                syntax : div ~ p
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors and Combinators</title>
+
+    <!--
+    // part 1
+    <style>
+
+        pre {
+            color : skyblue;
+            font-size : 20px;
+        }
+
+        .style1 {
+            color : brown;
+        }
+        #style2 {
+            color : blue;
+        }
+        .center {
+            text-align : right;
+        }
+    </style>
+-->
+
+    <!--
+    // part 2
+    <style>
+        *{
+            background-color: aliceblue;
+        }
+    </style>
+-->
+
+    <!--
+    // part 3
+    <style>
+        h1,p {
+            color : white;
+            background-color: red;
+        }
+    </style>
+-->
+
+    <style>
+        div > p {
+            color : green;
+        }
+
+        div + p{
+            color : orangered;
+        }
+
+        div ~ p {
+            font-size : 40px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!--
+    // part 1
+
+    <pre>I love You</pre>
+    <h1 class = "style1">This is heading</h1>
+    <p id = "style2">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p class = "style1 center">This is paragraph 3</p>
+    -->
+
+    <!--
+    // part 2
+    <p>This is paragraph</p>
+    <h1>This is heading</h1>
+    <p>This is again paragraph</p>
+    -->
+
+    <!--
+    // part 3
+    <h1>This is heading</h1>
+    <p>This is again paragraph</p>
+    -->
+
+    <div>
+        <p>This is paragraph inside div</p>
+        <p>This is paragraph inside div</p>
+        <section>
+            <p>This is paragraph for understanding child selector</p>
+        </section>
+    </div>
+
+    <p>This is paragraph outside div for understanding adjacence sibling selector</p>
+    <p>This is another paragraph tag for understanding general sibling selector</p>
+
+</body>
+
+</html>
+
+<!--
+    learning :
+        1. element selctor
+        2. id selector
+        3. class selector
+        4. multiple id class usses 
+
+        5. universal selector
+
+        6. grouping selector
+        7. combinator selector 
+            1. descendent 
+            2. child
+            3. adjacence sibling 
+            4. general sibling
+-->
