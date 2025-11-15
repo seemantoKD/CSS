@@ -1,0 +1,104 @@
+<!--
+    note :
+        1. text-align : align kora jay text ke, by default left side theke text strt hoy
+        2. text-decoration : underline,overline,linethrough etc deya jay text a
+        3. text-indent : indent means prothom line user er icchamoto ekta distance theke shuru kora
+        4. text-transform : text ke uppercase ,lowercase,capitalize kora jay
+            # capitalize means -> prottek word er first letter capital letter
+        5. text-shadow : evabe likhte hoy 
+            x axis borabor kototuku , y axis borabor kototuku, ki color er shadow hobe
+            ex : text-shadow : 5px 3px grey
+        6. word-spacing : word er moddhe kototuk distance thakbe
+            -ve o use kora jay
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling</title>
+    <style>
+        .align1{
+
+            text-align:center;
+        }
+
+        .align2{
+
+            text-align:justify;
+        }
+
+        .decoration1{
+
+            text-decoration:underline;
+        }
+
+        .decoration2{
+
+            text-indent:50px;
+        }
+        .mystyle{
+
+            text-transform:capitalize;
+        }
+        .shadow{
+
+            text-shadow : 5px 3px red;
+        }
+
+        .space {
+
+            word-spacing: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "section1">
+        <h1 class = "align1">This is heading 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sed consequuntur, optio quae sint dignissimos ipsa soluta eum iusto reprehenderit sit autem cupiditate omnis dolore corporis quaerat perspiciatis totam commodi.</p>
+    </div>
+
+    <div id = "section2">
+        <h1>This is heading 2</h1>
+        <p class = "align2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem quisquam quidem, dolorem amet corrupti praesentium mollitia, officiis eligendi aut sit doloribus, nam impedit veniam odio eaque corporis saepe voluptatibus illo!</p>
+    </div>
+
+    <div >
+        <h3 class = "decoration1">Bangladesh</h3>
+    </div>
+
+    <div >
+        <p class = "decoration2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui similique quos totam iste quo tempora optio, molestiae dolorum repellat iure quas, ducimus architecto maxime repudiandae facilis suscipit alias quisquam eligendi.</p><hr>
+    </div>
+
+    <div>
+        <h1 class = "align1" style = "text-decoration : underline; text-decoration-color : red">Text-Transform use case</h1>
+        <p class = "mystyle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum natus doloribus aspernatur iusto blanditiis est error quae, nobis ipsum pariatur consequatur totam placeat? Autem officiis sint quidem modi deserunt accusantium.</p>
+    </div>
+
+    <div>
+        <hr>
+        <h1 class = "shadow">This is shasdow header</h1>
+    </div>
+
+    <div>
+        <hr>
+        <p class ="space">This is a paragraph tag for understanding word spacing</p>
+    </div>
+</body>
+
+</html>
+
+<!--
+    learning : 
+        1. text-align
+        2. text-decoration
+            -> text-decoration-color
+        3. text-indent
+        4. text-transform
+        5. text-shadow
+        6. word-spaccing
+-->
