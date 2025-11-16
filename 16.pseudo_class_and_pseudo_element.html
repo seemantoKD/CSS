@@ -1,0 +1,131 @@
+<!--
+    note :
+        1. pseudo class : 
+            1. pseudo class er sahajje ekti element special event a ki react korbe ta bole deya jay
+                example : ekta text fill normal ache but mouse neyar sathe sathe color hoye jabe 
+                    and text fill a click korar sathe sathe text fill er width bere jabe
+
+            -- jevabe use korbo pseudo class
+                1. prothome selector (a tag)
+                2. : sign
+                3. pseudo class er name (hover,focus,nth-child(even/odd))
+
+
+            *** pseudo class ekta element er puro style change kore dite pare caile
+        2. pseudo element :
+             *** pseudo element puro element niye kaj kore na kichu part niye kaj kore
+             1. pseudo element er jonno double colon(::) use korte hoy
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class and pseudo element</title>
+    <style>
+        a.mylink:hover {
+            background-color: green;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1 rem;
+            width: 150px;
+        }
+
+        input:hover {
+            background-color: brown;
+        }
+
+        input:focus {
+            width: 350px;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+        }
+
+        tr:nth-child(odd) {
+            background-color: burlywood;
+        }
+
+
+        p:hover {
+            color: red;
+        }
+
+        /*pseudo element*/
+        p::first-line {
+            color: blue;
+            font-size: 3.5 rem;
+        }
+
+        p::after {
+            content: ">"
+        }
+
+        p::before {
+            content: "<"
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!--pseudo class-->
+    <a class="mylink" href="#">Tutorial</a>
+    <a href="#">Home</a>
+    <br><br>
+
+        <!-- focus use case -->
+        <input type="text" placeholder="Enter your name"><br><br>
+
+        <!--pseudo class for table-->
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+        </tr>
+
+        <tr>
+            <td>Seemanto</td>
+            <td>21</td>
+        </tr>
+
+        <tr>
+            <td>Ritu</td>
+            <td>20</td>
+        </tr>
+
+    </table>
+
+
+    <hr>
+    <!--pseudo element-->
+    <p>Now came hopes with the midnight straight faster while gloated, door feather shall was just rare from entrance.
+        Whether i oer on or countenance burden in, evilprophet distant on name startled of. I bust and explore curious
+        seeing my. Weary more memories hauntedtell the my rare. Raven is yore seraphim.</p>
+</body>
+
+</html>
+
+
+
+<!--
+    learning :
+        1. pseudo element
+        2. pseudo class 
+
+    summary : 
+        1. pseudo class puro element niye kaj kore but pseudo element ekta element er kichu part niye kaj kore
+        2. pseudo class and pseudo element er nam jante hobe and their functional activities google kore
+        3. class and element style korar syntax 
+            i. j tag ke niye kaj korbo tar nam 
+            ii. :(for pseudo class) ::(for pseudo element) sign dite hobe
+            iii. pseudo class/pseudo element name (eta google kore janbo kar kaj ki)
+-->
