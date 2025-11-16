@@ -1,0 +1,28 @@
+h1 {
+    background-color: brown;
+    display: inline;
+}
+
+h2 {
+    background-color: yellowgreen;
+}
+
+span {
+    background-color: yellowgreen;
+    /*display: block;*/
+}
+
+.e1 {
+
+    width : 600px;
+    margin : auto;
+    border : 3px solid brown;
+}
+
+.e2 {
+
+    
+    max-width : 600px;
+    margin : auto;
+    border : 3px solid pink;
+}
