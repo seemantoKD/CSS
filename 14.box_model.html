@@ -1,0 +1,62 @@
+<!--
+    note :
+        1. element ke position korte, layout design korar smy, box model khub e kaje lage
+        2. html er sokol element box hisabe kaj kore by default
+            # jekunu ekta element ke color korlei dekha jay seta box er moto hoye color hoy
+                eg : h1 tag style follow
+        3. box model er maddome kunu ekta tag er total hight width jana jay inspect a giye
+        4. box model er use case bujar jonno div er nice ekti paragraph tag nilam
+            and webpage a giye dekhlam paragraph ta div er sathe same jayga theke start hoy ni
+            so align kore same jaygay niye asar jonno width jana thaka lagbe, jeta box model
+            diye easily jana jay.
+        5. inspect theke o margin padding egula manually deya jay r auto code a likha hoy
+            but refresh dile cole jay se jonno code inspect theke copy kore ene then editor a bosabo
+        6. 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+        body{
+            background-color : grey;
+        }
+
+        h1{
+            background-color: brown;
+        }
+
+        .container{
+            background-color: burlywood;
+            width : 300px;
+            padding : 5px;
+            border : 5px solid black;
+            margin :5px;
+        }
+        p{
+            margin-left: 15px;
+            width : 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<h1>Bangladesh</h1>-->
+    <div class = "container">
+        This is a div
+    </div>
+    <p>This is a paragraph</p>
+</body>
+
+</html>
+
+<!--          
+    learning : 
+        1. total hight width calculate using box model and inspect
+        2. manually margin padding inspect theke diye code copy kore code editor a bosanu
+-->
