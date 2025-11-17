@@ -1,0 +1,228 @@
+<!--
+    note :
+        1. pseudo class er sahajje kuno ekta element er state change hole style kokra jay
+            example : button er upor hover korle state change hoy
+        2. pseudo element er sahajje kichu part er style change kora jay
+
+        ! some important pseudo class
+            i. hover
+            ii. focus
+            iii. not(selector)
+            iv. not (:hover) - Negation is possible
+            v. first-of-type
+            vi. last-of-type
+
+
+        ! some pseudo element
+            i. firt-letter
+            ii. first-line
+            iii. before
+            iv. after
+
+        3. p-first-child -> onekgula p tag ache but select korbe first p tag
+        4. p-last-child -> onekgula p tag ache but select korbe last p tag
+        5. jodi first/last chara onno gula niye kaj kori tahole nth-child use korbo.
+            syntax : p:nth-child(joto number seta dibo like : 2)
+            {
+                // jabotio kaj
+            }
+
+            ## first bracket a n/2n odd / even hen ten sob deya jabe ..... w3school theke dekhe nibo
+        6. first-of-type class -> same tag or same type er just first ta ke niye kaj kore 
+        7. last-of-type class -> same tag or same type er just last ta ke niye kaj kore
+
+
+        8. pesudo element
+            -> er sahajje kuno ekta element er kuno ekta small part niye kaj kora jay
+            example : p tag er first letter style korbo
+            evabe first-letter,last-letter,first-line eigula style kora jabe...
+
+            -> selection : kunu kichu webpage a select korle ta selection a ja ache ta
+            mene colbe
+
+            -> before : beshi important and sobceye beshi kaje lage
+                * kunu kichur age kaj korte hole
+                * before use korle prothomei style er vitore content property use korte hobe
+                *
+
+            -> after : beshi important and sobceye beshi kaje lage
+                * kunu kichur pore kaj korte hole 
+                * after use korle prothomei style er vitore content property use korte hobe
+
+
+        ## caile before after ba onekgula pseudo element eksathe use kora jay 
+            like : 
+            .demo2::before,.demo2::after {
+
+                style
+            }
+
+
+
+        9. placeholder : eta pseudo element hisabe kaj korteche css a.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo- class and element part 2</title>
+    <style>
+        /* hover class use case */
+        .demo:hover {
+
+            background-color: black;
+            color: white;
+        }
+
+        /* first-child/last-child class use case */
+        div>p:first-child {
+
+            background-color: brown;
+            color: beige;
+        }
+
+        /* nth-child class use case */
+        div>p:nth-child(odd) {
+
+            background-color: brown;
+            color: beige;
+        }
+
+        ul>li:nth-child(2n+1) {
+
+            background-color: chartreuse;
+            font-size: 50px;
+        }
+
+        /* first-of-type and last-of-type usecase*/
+        ol>li:first-of-type {
+
+            background-color: crimson;
+        }
+
+        ol>li:last-of-type {
+
+            background-color: rgb(121, 213, 234);
+            color: red;
+        }
+
+        /* pseudo element */
+
+        /* first-letter use case */
+        p::first-letter {
+            font-size: 30px;
+
+        }
+
+        /* selection use case */
+        ::selection {
+
+            color: burlywood;
+            background-color: brown;
+        }
+
+        /* before and after use case 
+        .demo2::before {
+
+            content : '';
+            width : 100%;
+            height: 20px;
+            background-color : orange;
+            display:inline-block;
+        }
+
+        .demo2::after {
+
+            content : '';
+            width : 100%;
+            height: 20px;
+            background-color : green;
+            display:inline-block;
+        }
+            */
+
+        input::placeholder{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        pseudo class :
+
+        <div class = "demo">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, quidem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, quidem.</p>
+        <hr><hr>
+
+        <ul>
+            <li>Home1</li>
+            <li>Home2</li>
+            <li>Home3</li>
+            <li>Home4</li>
+            <li>Home5</li>
+        </ul>
+        
+        <br><br><br>
+        <ol>
+            <li>first-of-type understanding</li>
+            <li>first-of-type understanding</li>
+            <li>first-of-type understanding</li>
+            <li>first-of-type understanding</li>
+            <li>last-of-type understanding</li>
+        </ol>
+        </div>
+    -->
+
+
+    <!-- pseudo element -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque?</p>
+    <p>Norem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque?</p>
+    <p>Sorem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque?</p>
+
+
+    <!-- after and before -->
+    <!--.demo::before -> div er age ki ki kaj hobe-->
+    <div class="demo2">
+
+    </div>
+
+    <span>Div er porer kaj hocche upore .demo2 :: after r orange ta hocche before er jonno</span>
+
+
+
+    <hr><hr><mark>Placeholder use case example</mark><br><br>
+    <!--place holder use-->
+    <input type="text" placeholder="hello everyone">
+
+
+
+</body>
+
+</html>
+
+<!--
+    learning :
+        1. pseudo class
+            i. hover
+            ii. first/nth/last-child
+            iii. first-of-type
+            iv. last-of-type
+
+
+        2. pseudo element
+            i. first/last-letter
+            ii. selection
+            iii. before
+            iv. after
+            v. placeholder (pseudo element)
+    
+-->
