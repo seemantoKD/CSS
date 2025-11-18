@@ -1,0 +1,174 @@
+<!--
+    note :
+        1. basically amra jodi width 50% rekhe extra padding or margin use kori tahole
+            width change hoy. But box sizing property use korle width thik rekhe add kore
+            padding or margin or etc. 
+                -> syntax : box-sizing : border-box;
+
+        2. float left and width 50% deyay duita div pasapasi asche. ebar jodi extra padding
+            or margin or border use kori tahole width bere jabe and 50% width eta r thik thakbe na.
+            so duita div pasapasi thakbe na nice neme jabe cz width bere jabe. user jodi cay
+            padding rekhe width ta thik rakhbe tahole box-sizing use korte hobe.
+
+        3. opacity 0 to 1 er moddhe use kora jay, by default 1 thake.
+            * opacity diye kunu kicur garotto fix kora jay. like : text,image etc.
+
+            !!! dori ekta image hover korle clear dekhabe that means garotto/opacity 1 
+            but hover na korle opacity kom thakbe 1 theke.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box sizing and opacity</title>
+    <style>
+        /* box-sizing example 1
+        .div1{
+
+            background-color: brown;
+            height : 300px;
+            width : 50%;
+            padding : 10px;
+            border : 5px solid burlywood;
+            box-sizing : border-box; 
+        }
+        
+
+        .div2{
+
+            background-color: green;
+            height : 300px;
+            width : 50%;
+        }
+        */
+
+
+        /* box sizing example 2
+        .div1 {
+
+            background-color: brown;
+            height: 300px;
+            width: 50%;
+            float: left;
+
+            // using border and break pasapasi thaka for increasing width 
+            border : 20px solid black; 
+
+            // using box-sizing and fix that issue 
+            border : 20px solid black; 
+            box-sizing : border-box;
+
+        }
+
+
+        .div2 {
+
+            background-color: green;
+            height: 300px;
+            width: 50%;
+            float: left;
+        }
+        */
+
+
+        /* opacity */
+        p {
+
+            opacity: 0.7;
+        }
+
+        img {
+
+            height: 300px;
+            width: 500px;
+            opacity: 0.5;
+        }
+
+        /* using hover and see clear image */
+        img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Box Sizing 
+    <div class="div1">
+        <p>Etterno degli pregator in esperienza volta. Nel fragilita sí degli alla quella spezial e intendo, piú uomini
+            in esperienza dinanzi delle fatica. Le che fallo l'acume niuna del intendo ammirabile tal noi, in sua mossa
+            della manifesta non l'uomo, occulta fa potremmo cominciamento ora, che e cospetto avvedimento vostro lodato
+            piene o, ci e sé come bene non alcun dalla degli. Fosse mentre lui nostro in trapassare e e eterni
+            manifestamente. Forza occulta della pregato manifesta maesta. Con tal della occulta in cose pericoli nel,
+            alcun mortali che ripararci essilio in dovendo vostro propria bene, e si per cosa priegano pieno noi. Tale
+            di parte bene seguitando tutte niuna eterni a. Fa ingannati noia da le divenuti. Viviamo del sogiacere come
+            ma procuratore facciamo da. Esse e allo il viviamo furon. Udita pietosa sí cosa tal novella il quale sí
+            furon. Alcun né a la sua pericoli reputiamo come merito ancora, e fallo non occulta e le. La nome di suo
+            siamo gli udita dinanzi e avvien. Tutte durare seguitando cosa propria cosa prestasse dio pietosa,
+            incominciare piú che con noia che come come nostra potra. Che fu nondimeno al intendo che, alle di che forza
+            viviamo da manifesta noi.</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aspernatur veritatis quas cum. Incidunt
+            doloremque at labore dolore voluptatibus inventore eaque modi vitae harum eum. Temporibus quod voluptatem
+            doloribus quaerat ea atque exercitationem aut perferendis repudiandae ullam? Facere dolores nulla deleniti
+            ea eveniet nisi explicabo error quia sint possimus consequatur consectetur officiis repudiandae reiciendis
+            delectus dignissimos, ducimus fugiat. Cum esse aspernatur maiores corporis odit quae in ab autem illo.
+            Eligendi doloribus tempore quam at iste magni fugiat accusamus veritatis nobis doloremque placeat provident
+            ducimus eius cumque asperiores cum repellat blanditiis officia, maxime harum rem voluptas. Sit corrupti
+            totam minus perspiciatis.</p>
+    </div>
+    -->
+
+    <!-- box-sizing example 2 
+    <div class="div1">
+        <p>Etterno degli pregator in esperienza volta. Nel fragilita sí degli alla quella spezial e intendo, piú uomini
+            in esperienza dinanzi delle fatica. Le che fallo l'acume niuna del intendo ammirabile tal noi, in sua mossa
+            della manifesta non l'uomo, occulta fa potremmo cominciamento ora, che e cospetto avvedimento vostro lodato
+            piene o, ci e sé come bene non alcun dalla degli. Fosse mentre lui nostro in trapassare e e eterni
+            manifestamente. Forza occulta della pregato manifesta maesta. Con tal della occulta in cose pericoli nel,
+            alcun mortali che ripararci essilio in dovendo vostro propria bene, e si per cosa priegano pieno noi. Tale
+            di parte bene seguitando tutte niuna eterni a. Fa ingannati noia da le divenuti. Viviamo del sogiacere come
+            ma procuratore facciamo da. Esse e allo il viviamo furon. Udita pietosa sí cosa tal novella il quale sí
+            furon. Alcun né a la sua pericoli reputiamo come merito ancora, e fallo non occulta e le. La nome di suo
+            siamo gli udita dinanzi e avvien. Tutte durare seguitando cosa propria cosa prestasse dio pietosa,
+            incominciare piú che con noia che come come nostra potra. Che fu nondimeno al intendo che, alle di che forza
+            viviamo da manifesta noi.</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi aspernatur veritatis quas cum. Incidunt
+            doloremque at labore dolore voluptatibus inventore eaque modi vitae harum eum. Temporibus quod voluptatem
+            doloribus quaerat ea atque exercitationem aut perferendis repudiandae ullam? Facere dolores nulla deleniti
+            ea eveniet nisi explicabo error quia sint possimus consequatur consectetur officiis repudiandae reiciendis
+            delectus dignissimos, ducimus fugiat. Cum esse aspernatur maiores corporis odit quae in ab autem illo.
+            Eligendi doloribus tempore quam at iste magni fugiat accusamus veritatis nobis doloremque placeat provident
+            ducimus eius cumque asperiores cum repellat blanditiis officia, maxime harum rem voluptas. Sit corrupti
+            totam minus perspiciatis.</p>
+    </div>
+    -->
+
+
+    <!-- opacity -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid voluptatum cumque aliquam provident tenetur
+        accusamus nostrum consectetur laudantium amet aut.</p>
+    <br><br>
+    <img src="19.bg-image.jpg" alt="image-not-found">
+
+
+</body>
+
+</html>
+
+<!--
+    learning :
+        1. box-sizing example 1
+        2. box-sizing example 2
+        3. opacity using p tag and img tag
+-->
