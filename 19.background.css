@@ -1,0 +1,12 @@
+body {
+
+    /* separately use 
+    background-image: url("19.bg-image.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    */
+
+    /*uporer gular shortcut */
+    background : #fff url("19.bg-image.jpg") no-repeat top;
+}
