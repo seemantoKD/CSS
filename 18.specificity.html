@@ -1,0 +1,132 @@
+<!--
+    note :
+        *** ei topic theke onek question interview te ase
+        1. same tag er upor multiple kaj korle (like background prothome blue then dilam green tahole green execute hobe) always last er ta execute hoy
+        2. 
+
+        // specifiacity calculator 
+            1. a = number of - id
+            2. b = number of - class/pseudo class/attribute
+            3. c = number of - elements / pseudo elements
+
+            example 1 : 
+
+            question : h1 er background color ki hobe ?
+            h1 {
+                background-color : brown;
+            }
+
+            h1 {
+                background-color : green;
+            }
+
+            ans : 
+            // for brown
+            a = 0, b=0, c=1 -> 0 0 1
+
+            // for green
+            a = 0, b=0, c=1 -> 0 0 1
+
+            jehetu specificity value same tai amra priority check korbo.
+            code always upor theke nice execute hoy . so background color hobe green
+
+            example : 02
+
+            question : brown or green or burleywood?
+            h1 {
+                background-color : brown;
+            }
+
+            h1 {
+                background-color : green;
+            }
+            
+            .title {
+                background-color : burleywood;
+            }
+
+            ans : 
+            specificieaty calculate 
+            
+            1. for brown : a = 0, b= 0, c = 1       -> 0 0 1
+            2. for green : a = 0, b= 0, c = 1       -> 0 0 1
+            3. for burleywood : a = 0, b = 1, c = 0 -> 0 1 0
+
+            so dekha jacche burleywood er specificity beshi thats why burleywood hobe
+            answer.
+
+
+            example : 03
+
+            question : brown or burleywood or green?
+            h1 {
+                background-color: brown;
+            }
+
+            .title {
+                background-color :burlywood;
+            }
+
+            #heading {
+                background-color: green;
+            }
+
+            ans : 
+
+            1. for brown : a = 0, b = 0, c = 1      -> 0 0 1
+            2. for burleywood : a = 0, b = 1, c = 0 -> 0 1 0
+            3. for green : a = 1, b = 0, c = 0      -> 1 0 0 
+
+            jehetu green er specificity beshi thats why ans hobe green
+
+    summary : 
+        -> jar specificity beshi tar priority beshi 
+        -> if specificity same then sobar last a jeta use kora hobe seta 
+            priority pabe.
+
+    # important : 
+        * universal selector (*) specificity - 0
+        * for id = 100 , for class = 10 , for element = 1
+        * inline css specificity : 1000
+        * !important specificity : 10000 -> eta use kora recomended noy , eta jamela create kore
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specifity</title>
+    <link rel="stylesheet" href="18.specificity.css">
+</head>
+
+<body>
+    <!--example - 01
+    <h1>Brown or green?ans = green</h1>-->
+
+
+    <!--example - 02
+    <h1 class="title">Brown or green or burleywood ? ans = green</h1>-->
+
+
+    <!--example - 03
+    <h1 id="heading" class="title">Brown or green or burleywood ? ans = green</h1>-->
+
+    <!--example - 04 -> inline css
+    <h1 id="heading" class="title" style = "background-color : orange">Brown or green or burleywood or orange? ans = orange because inline css er specificity beshi bakider theke</h1>-->
+
+    <!--example - 05 : important er specificity-->
+    <h1 id="heading" class="title" style="background-color : orange">Brown or green or burleywood or orange? ans = brown
+        because important er specificity beshi bakider theke</h1>
+</body>
+
+</html>
+
+
+<!--
+    learning :
+        1. specificity calculation
+        *** anisul islam documentation dekha must for specificity
+-->

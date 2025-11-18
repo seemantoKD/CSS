@@ -1,0 +1,56 @@
+/*
+example - 01 ::
+
+h1 {
+    background-color: brown;
+}
+
+h1 {
+    background-color: green;
+    color : black;
+}
+*/
+
+
+/*
+example - 02 
+
+h1 {
+    background-color: brown;
+}
+
+.title {
+    background-color :burlywood;
+}
+
+h1 {
+    background-color: green;
+}
+*/
+
+/*
+h1 {
+    background-color: brown;
+}
+
+.title {
+    background-color :burlywood;
+}
+
+#heading {
+    background-color: green;
+}
+    */
+/* example 5 importantn er specificity */
+h1 {
+    background-color: brown !important;
+}
+
+.title {
+    background-color :burlywood;
+}
+
+#heading {
+    background-color: green;
+}
+
