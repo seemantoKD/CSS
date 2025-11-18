@@ -1,0 +1,69 @@
+<!--
+    note :
+        1. div gula basically ektar nice arekta thake, but user cailo div1 left a r div 2
+        right a thakbe, mane prothom line a duita div niye aste cay user. ei kaj korar jonno 
+        float use korte hoy. float basically layout design kore.
+
+        float use kore value bosale dekha jay jader upore float apply kora hoy ni tara 
+        automatic style hoye jacche enough space pawar karone ... jemon div 1 div 2 ek line
+        a asar por jayga thakar karone div 3 o ekline a cole asche but user eta cayni. so 
+        div 3 ta ke user er iccamote nice namanur upay holo :
+            -> jekhane style cai na sekhane float clear korte hobe
+            example : clear : both;
+
+            # clear : both -> means : left right jai thakouk na keno sob kichu clear hoye jabe
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+
+    <style>
+
+        #section1 {
+            float: left;
+            background-color : green;
+        }
+
+        #section2 {
+            float:right;
+            background-color : yellow;
+        }
+
+        #section3 {
+            clear : both;
+            background-color : orange;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="section1">
+        <h1>Seemanto</h1>
+    </div>
+
+    <div id="section2">
+        <h1>Srijonti</h1>
+    </div>
+
+    <div id="section3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores rerum ab reiciendis sint omnis facere,
+            maiores commodi repellendus explicabo tempore!</p>
+    </div>
+
+</body>
+
+</html>
+
+<!--
+    learning :
+        1. float
+        2. clear
+-->
