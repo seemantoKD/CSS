@@ -1,0 +1,143 @@
+<!--
+    note:
+
+        - z index :
+
+            # stack ordering kora hoy basically z index use kore
+            ** positioning korle mainly ektar upor arekta cole ase 
+            *** ebar jodi user tar icchamote order korte cay tahole z index use korte hoy
+
+
+            !! z index just position er sathe kaj kore
+            # by default z index 0 thake. jetar z index boro seta upore ba samne ase.
+            # z-index er value postive and negative duitai hote pare
+
+            summary : 
+                1. jar z-index er value boro se samne ba upore thakbe.
+                2. z-index diye user order control korte pare
+                3. z-index shudhu position er sathe kaj kore
+
+
+        - css3 variables :
+
+            -> variable ta basically css3 er part
+            -> variable globally declare er jonno selector hisabe root nite hoy
+                then root er vitore variable declare korte hoy
+                ex : :root {
+                    // variable declare syntax : -- variableName : value;
+                }
+            -> create kora variable ta tarpor jekunu jaygay use kora jabe
+                syntax : background-color / property : var(--variableName)
+
+            # variable er subida hocche -> bar bar alada alada style na kore 
+                ekta variable er class create kore sekhane sob variable declare and
+                use korbo and modify korbo.
+
+                !! just j color er jonno variable declare korte hoy emn na. User caile
+                jekunu propertyr jonno variable set korte pare.
+
+            # fallback value use kora valo . Incase declare kora ta kaj na korle fallback ta kaj korbe
+
+            ** css3 er variable gula oneksmy onek browser support kore na. Jemon internet explorer.
+                ? tahole kivabe browser compatable kora jay?
+                    => seketre extra vabe likhe dite hoy value gula variable declare chara
+
+
+            ??? css3 er variable gula ke responsive korte hoy kivabe ??
+                => @media screen and (max-width: 600px) {
+                    :root {
+                        variableName : black;
+                        anotherVariable : green;
+                    }
+                }
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index and css3 variables</title>
+    <style>
+        div {
+
+            height: 250px;
+            width: 250px;
+        }
+
+        #div1 {
+
+            background-color: var(--anotherVariable);
+            /*background-color: var(--anotherVariable,green); fallback color */
+            position: absolute;
+            z-index: 1;
+        }
+
+        #div2 {
+
+            /* background-color : green; browser compatable */
+            background-color: var(--variableName);
+            /* using declared variable */
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            z-index: 2;
+        }
+
+        /* create variable */
+        :root {
+
+            --variableName: green;
+            --anotherVariable: red;
+        }
+
+        /* responsive css3 variable */
+        @media screen and (max-width: 600px) {
+            :root {
+                --variableName: black;
+                --anotherVariable: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--z index
+    <div id="div1">
+
+    </div>
+
+    <div id="div2">
+
+    </div>
+    -->
+
+    <!--css3 variable-->
+    <div id="div1">
+
+    </div>
+
+    <div id="div2">
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    learning:
+        1. z-index
+        2. css3 variable
+            i. variable declare
+            ii. usses of variable
+            iii. fallback vallue
+            iv. responsive css3 variable
+-->
