@@ -1,0 +1,117 @@
+<!--
+    note: 
+
+        - overflow 
+            -> dori ekta div er height and width fix kore deyar por needed content
+                sei div a rakha gelo na . orthat overflow hoice . this moment ki hobe
+                or kivabe handle korte hobe situation eta overflow diye kora jay.
+                
+            * overflow er value by default visible thake.
+                # visible er kaj hocche jototuk rakha jay rakhbe baki gula bayre rekhe dibe
+                # hidden er kaj hocche jototuk rakha jay tototuk dekhabe, bakita hide kore rakhbe
+                # scroll er kaj hocche ekta scroll bar create hobe oi height and width a and scroll kore full ta pora jabe
+                # auto er kaj hocche jokhon scrool er drkr tokhon scroll bar create korbe otherwise korbe na
+
+        - tooltip
+            -> kuno ekta jinis niye additional information dey tooltip
+            -> jemon dori fb : hover korle additional information dibe : time waste media
+            -> tooltip jekunu keu er sathe e use kora jay. But amra hyperlink er sathe dekhbo.
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow and custom tooltip</title>
+    <style>
+        /* overflow */
+        div {
+
+            color: burlywood;
+            height: 100px;
+            width: 250px;
+            background-color: brown;
+            border: 1px solid burlywood;
+            overflow: auto;
+
+        }
+
+        hr {
+            margin-bottom: 20px;
+        }
+
+
+        /* tooltip */
+        .tooltip {
+
+            position: relative;
+
+        }
+
+        .tooltip .tooltip-txt {
+
+            /* hidden */
+            visibility: hidden;
+            width: 150px;
+            background-color: indigo;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 1;
+        }
+
+        /* syntax : kake hover korle , ki hobe */
+        .tooltip:hover .tooltip-txt {
+
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!--overflow-->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, possimus ut neque modi voluptatem nesciunt
+        ipsam assumenda, accusantium autem tenetur eveniet ducimus impedit minus iusto eius, distinctio cupiditate.
+        Natus delectus debitis sunt perferendis blanditiis iusto impedit error autem asperiores a consequatur ad
+        quisquam provident, incidunt aspernatur! Quibusdam consectetur facilis architecto.
+    </div>
+    <hr>
+    <!--tooltip with hyperlink-->
+    <a href="#" class="tooltip">
+        Facebook
+        <span class="tooltip-txt">Facebook is a social media</span>
+    </a>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    learning: 
+        1. overflow
+            i. visible
+            ii. hidden
+            iii. scroll
+            iv. auto
+
+        2. tooltip
+            i. normally visibility hidden but hover korle visible
+                -> syntax : kake hover korle , ki hobe
+                example : 
+                    .tooltip:hover .tooltip-txt{
+
+            visibility: visible;
+        }
+-->
