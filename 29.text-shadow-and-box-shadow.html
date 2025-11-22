@@ -1,0 +1,67 @@
+<!--
+    note : 
+
+        - text-shadow
+
+        - box-shadow
+
+            * card designing er ketre box-shadow onek use kora hoy
+
+
+        ** shadow default vabe off set vabe hoy mane bairer dike but user caile
+        inset o use korte pare tahole vitore shadow hobe
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow - text and box</title>
+    <style>
+        h1 {
+
+            /* horizontal vertical and color 
+            text-shadow : 5px 5px red;*/
+
+            /* blur by 3rd px  -> x y z(z means blur) color*/
+            text-shadow : 5px 5px 5px red; 
+        }
+
+        div {
+
+            width : 200px;
+            background-color: brown;
+            border : 2px solid green;
+
+            /* using box-shadow -> x y z(z means blur) color*/
+            box-shadow : inset 5px 12px 5px teal;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bangladesh</h1>
+
+    <!--box-shadow-->
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsum natus minus, blanditiis optio error voluptates perspiciatis expedita distinctio, tenetur minima ducimus exercitationem consectetur? Quibusdam, assumenda inventore? Unde animi ipsam eum dolor, impedit necessitatibus id maiores magni officia ex! Possimus sunt blanditiis impedit natus! Nisi quo modi consequatur et culpa.</p>
+    </div>
+</body>
+
+</html>
+
+
+<!--
+    learning :
+
+        1. box shadow
+        2. text shadow
+        3. inset & off set
+
+        z -> blur
+        x -> x axis
+        y -> y axis
+-->
