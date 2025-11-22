@@ -1,0 +1,192 @@
+<!--
+    note : 
+
+        - flex-box layout
+            some known layout design : 
+                i. float
+                ii. position
+                iii. display
+
+            # flex-box -> flexible box
+            # er sahajje easily flexbox and layout design kora jay
+            # flex box a float positioning er hassel nai
+            # one dimensional layout 
+                - either in row 
+                - or coloumn
+
+            -> display : flex use korar por dekha jay dan bam a tan dile webpage ta flexible ba responsive hoy na
+            -> responsibe and more flexible korar jonno flexbox er aro kichu property use korte hobe
+                i. flex-wrap : wrap
+                    -> content jodi ekti row te jayga na hoy tahole arekti row te jaga kore nibe tobe obossoi screen a sobkicu dekhabe
+                    -> flex wrap use korbo jodi kokhono screen chutu boro korle hide na hoy kunu kicu seketre
+
+                ii. flex-wrap : nowrap
+                    -> eta default
+                    -> screen chuto boro korle screen jototuk tototuk dekhabe bakigula hide hoye jabe
+
+                iii. flex-wrap : wrap-reverse 
+                    -> screen a jayga na hole reversly sobgula dekhabe
+
+
+            *** direction : 
+                -> one dimensional 
+                    i. row borarbor
+                    ii. coloumn birabor
+
+                direction er jonno flex-direction property use hoy.
+                    i. flex-direction : row 
+                        -> row borabor element gula thakbe
+                    ii. flex-direction : column
+                        -> col borabor element gula thakbe
+
+                    ** reverse o use kora jay.
+                        i. row-reverse -> reversely row borabor sajbe
+                        ii. column-reverse -> reversely col borabor sajbe
+
+                ** flex-wrap and flex-direction ke eksathe use kora jay flex-flow property sahajje
+
+
+        - justify content
+
+            -> flex item ke align korte help kore
+            :: flex item holo flex container er vitorer sobkichu
+
+                . justify content property te value hisabe onekichu use kora jay
+                    i. flex-start
+                        -> default
+                        -> flex er shuru theke align kre
+                    ii. flex-end
+                        -> flex er shes theke align kore
+                    iii. center 
+                        -> center a align kore
+                    iv. space-around
+                        -> left,right,between tin dike space diye diye align kore
+                    v. space-between
+                        -> just between er moddhe space diye diye align kore
+
+        - align-item
+
+            -> flex container er vitor a flex-item ke align kore
+            
+            :: align-items property te onek value use kora jay
+                i. flex-start
+                    -> container er top er dike thakbe
+
+                ii. flex-end
+                    -> container er bottom er dike thakbe
+
+                iii. center
+                    -> container er center a thakbe
+
+            ** perfectly center korte hole 
+                i. justify contentt and ii. align-items duitai center dite hobe
+
+        - order 
+            -> order parent a use kora jay na , jekunu ekta parent er child a use kora jay
+            -> order diye asole kar age k asbe ba kar serial koto eta fix kore deya jay
+
+        - flexible-basis
+            -> kunu ekta element er initial size bole deya jay
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-box</title>
+    <style>
+        .flex-container {
+
+            background-color: lightcoral;
+            /* act like float without using float or positioning*/
+            display: flex;
+
+            /* wrap use korle jototuku jayga neyar ta nibe and tanatani korle o proyojonmoto dekhabe */
+            /* flex-wrap: wrap; */
+
+            /* usses of flex-direction */
+            /* flex-direction: column; */
+
+            /* flex-wrap and flex-direction eksathe use */
+            flex-flow: wrap row;
+
+            /* justify-content */
+            justify-content: center;
+
+            height: 300px;
+
+            /* using align-item */
+            align-items: center;
+        }
+
+        .flex-container>div {
+
+            background-color: lightseagreen;
+            width: 100px;
+            font-size: 35px;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+
+        <div class="div1" style="order : 7; flex-basis : 150px">
+            div1
+        </div>
+
+        <div class="div2" style="order : 8">
+            div2
+        </div>
+
+        <div class="div3" style="order : 1">
+            div3
+        </div>
+
+        <div class="div4" style="order : 2">
+            div4
+        </div>
+
+        <div class="div5" style="order : 3">
+            div5
+        </div>
+
+        <div class="div6" style="order : 4">
+            div6
+        </div>
+
+        <div class="div7" style="order : 5">
+            div7
+        </div>
+
+        <div class="div8" style="order : 6">
+            div8
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    learning :
+        1. display
+        2. flex-wrap
+        3. flex-direction
+        4. flex-flow
+        5. justify-content
+        6. align-items
+        7. order
+        8. flex-basis
+-->
