@@ -1,0 +1,155 @@
+<!--
+    note :
+        1. flexbox layout chilo 1 dimensional. Hoy row othoba column borabor style kora jeto
+            but grid hocche two dimensional.That means grid a row and column duitake eksathe 
+            niye kaj kora jabe.
+
+        2. grid er moddhe arekti subida hocche every cell/grid-items a width height etc etc user caile 
+            customize korte pare.
+
+        3. grid-template-columns : kotota column and koto width hobe bole deya jay 
+            value hisabe. auto use korle by default samevabe sob gula cell hoye jabe.
+
+        4. grid
+            - container : layout
+            - container er vitorer sob : grid-items
+
+        5. grid-template-rows : prottekta row er height bole deya jay.
+
+            -> value hisabe ekta dile just prothom row hobe eto height... evabe...
+            -> mainly order wise kore.. 1st row,second row,third row and so on..
+
+        6. grid-column-gap : 
+            -> ekta col theke onno ta koto distance a thakbe
+
+        6.5. grid-row-gap :
+            -> ekta row theke onno ta koto distance a thakbe
+
+        # grid-gap diye row and col er gap bole deya jay.
+            -> first a row gap
+            -> second a col gap 
+                            - bole dilei hoy
+
+        
+        7. grid-column-start/grid-column-end :
+            -> ekta column kuthay theke start hobe and kototuk porjonto jabe ta bole
+                deya jay ei property diye.
+        *** ei property directly grid-item a apply korte hoy, grid-container a na.
+
+            # grid-column-start/grid-column-end eksathe apply kora jay grid column property diye.
+                -> duita value use kora jabe
+                    -> first val : starting
+                    -> second val : ending
+
+                syntax- grid-column : starting / ending;
+
+            # ei kaj arekta keyword use kore o kora jay.
+                syntax- grid-column : starting / span ending;
+
+        8. row er ketre o same kaj kora jay. Just col er jaygay row use korlei hobe.
+        9. justify-content-
+            -> basically container niye kaj kore
+            -> val hisabe 
+                1. start 
+                2. end
+                3. center
+                    -use kora jay
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-container {
+
+            /* background-color: cadetblue; */
+            display: grid;
+            /* grid-template-columns: auto auto auto auto; */
+            grid-template-columns: 100px auto auto auto;
+            /* grid-template-rows: 120px 80px 40px; */
+
+            /* grid-column-gap: 10px;
+            grid-row-gap: 10px; */
+
+            /* grid gap */
+            /* grid-gap: 10px 10px; */
+
+            justify-content: center;
+            justify-content: center;
+        }
+
+        .grid-container>div {
+
+            background-color: chocolate;
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+            
+        }
+
+        .item1 {
+
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /* grid-column: 1 / 3; */
+            grid-column: 1 / span 3;
+
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /* grid-row: 1 / 3; */
+            grid-row: 1 / span 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="item1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    learning :
+        1. display: grid
+        2. grid-template-columns
+        3. grid-template-rows
+        4. grid-column-gap
+        5. grid-row-gap
+        6. grid-gap
+        7. grid-column-start
+        8. grid-column-end
+        9. grid-column-start
+        10. grid-column-end
+        11. grid-column
+        12. grid-row
+        13. span keyword function
+-->
