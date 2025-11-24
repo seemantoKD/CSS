@@ -1,0 +1,111 @@
+<!--
+    note: 
+
+    * terget : centering kora element ke
+    
+    1. Element basically 3 vabe centering kora jay
+        i. horizontaly
+        ii. vertically
+        iii. horizontally + vertically
+
+        -> centering er jonno onek doroner system royeche.
+            like : 
+                1. inline element er jonno ekta system
+                2. Block element er jonno arekta system
+
+    2. text-align muloto horizontally element ke center kore
+    3. Block element er width set kore dile take center korar jonno shudu text-align center korle hoy
+        na. Use korte hoy margin: 0 auto text-align er poriborte
+            i. 0 -> upore nice margin thakbe na
+            ii. auto -> dan and bam a soman poriman margin thakbe
+
+
+    case-1 : flex use kore
+    4. verically center korar jonno display:flex and align-items use korte hoy
+    5. horizontaly center korar jonno display:flex and justify-content use korte hoy
+
+
+    case-2 : without using flex but using positioning
+
+
+    **** horizontaly center or vertically center er jonno always flex use kora recomended
+        but flex use na korle 
+            i. position property use kore o center a align kora jay
+                -> e ketre parent ke relative rekhe child ke absolute diye dibo
+                -> then top left and transform use korte hobe
+            ii. grid o use kora jay
+            
+    *** centering er jonno priority 1 -> flex use kora
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Centering</title>
+    <style>
+        /* inline element center kora */
+        .main {
+
+            /* text-align: center; */
+            background-color: pink;
+            height: 400px;
+            width: 80%;
+            margin: 0 auto;
+            /* horizontaly center */
+            /* display: flex;
+            justify-content: center; */
+            /* vertically center */
+            /* align-items: center; */
+
+            /* centering using position */
+            position: relative;
+        }
+
+        /* Block element ke center kora */
+        h1 {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .desc {
+
+            background-color: green;
+            width: 300px;
+            height: 200px; 
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* purely center korar jonno transform use korlam */
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- <h1>Bangladesh</h1> -->
+
+
+        <div class="desc">
+            <h3>Sylhet</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem suscipit ex deserunt voluptatem
+                vel accusantium quia, molestias nihil id.</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<!--
+    learning: 
+        1. transform property
+        2. translate function
+-->
