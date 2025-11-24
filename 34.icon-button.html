@@ -1,0 +1,90 @@
+<!--
+    note: 
+
+        1. icon er jonno website -> font-awesome
+            use korbo jevabe
+                - button tag nibo
+                - font-awesome theke copy kora snippet code paste between button tag
+        
+        2. button create korar por button a click korle ki hobe seta 
+            onclick property diye bole dite hobe noyto button a click korle kaj korbe na button
+
+            example: onclick="window.open('https://www.studywithanis.com/')"
+                -> eta bujay : button a click korle ekta window open hobe jekhane ei link address a niye jabe
+
+        3. class="btn request-callback"
+            q1. ei property use korle ki hoy
+            q2. ei property use na korle ki hoy
+
+            soln: 
+                ans1. 
+                    :: ekta notun page a open hobe
+
+
+                ans2. 
+                    :: notun page a open hobe na... webpage j page a ache sekhanei open hoye jabe
+
+            # basically eta target = "blank" er alternative hisabe kaj kore
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>icon-button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .social-media {
+
+            background-color: grey;
+            padding: 50px 20px;
+            text-align: center;
+
+        }
+
+        .btn {
+
+            border: none;
+            padding: 10px 20px;
+            font-size: 2rem;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+
+            cursor: pointer;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="social-media">
+
+        <button class="btn" onclick="window.open('https://www.facebook.com/')" class="btn request-callback"><i
+                class="fa fa-facebook" style="color:#3b5998" aria-hidden="true"></i></button>
+        <button class="btn" onclick="window.open('https://www.studywithanis.com/')" class="btn request-callback"> <i
+                class="fa fa-google" aria-hidden="true"></i> </button>
+
+    </div>
+
+</body>
+
+</html>
+
+
+<!-- 
+    learning: 
+        1. onclick property
+        2. class="btn request-callback"
+
+
+        * button ke kivabe clickable
+        * button ke kivabe linkable
+                                - korte hoy (window.open property use kore) seta shikhlam
+        * new page a open korte hole class="btn request-callback" eta use korte hoy
+        * font-awesome theke icon add kora shikhlam
+-->
