@@ -1,0 +1,443 @@
+<!--
+    note:
+        1. present time float use korar kunu reasone nai, float er sokol
+            kaj flexbox sundor kore korte pare hassel chara.
+
+        2. float just use korbo jokhon ekta image er pase text wrap korte 
+            bola hoy tokhon. echara ar kuthaw ekn float use kora smart work noy.
+
+        3. Flexbox :
+            Flexbox is a CSS box model to easily layout,align and distribute
+            space among items within a container either horizontally or vertically.
+
+        4. Flexbox one dimensional, Flexbox niye thinking korle ekdike 
+            nojor dite hobe. Either Horizontally or vertically.
+
+        - Flexbox
+            1. we know div ekta block element. Block element mane
+                element gula ektar por ekta by default niche niche asbe.
+                so block element er width jodi container er theke kom o hoy
+                tarpore era ektar por ekta niche niche wrap hobe
+
+            2. But jodi amra display:flex kore dei container ke tahole sathe sathe
+                container ekta superpower peye jabe and vertically thaka element gula
+                horizontally cole asbe. 
+                    -> flexbox er prothom behave e hocche eta j vertical theke horizontal hoye jawa.
+                    -> flexbox a -
+                        i. container ke bola hoy flex-container
+                        ii. container vitorer gulare bola hoy flex-item
+
+                flexbox diye container er upor kicu flex property and item er upor
+                o kichu flex property apply kora jay.
+
+                # flex box a prothome container ke property deya hoy then deya hoy item er upor
+
+            3. - container er property
+                1. flexbox bujte hole axis bujte hobe
+                    axis duita
+                        i.  main axis(x or row)
+                        ii. cross axis(y or col)
+
+                    i. main axis:
+                        -> main axis bolte webpage a use kora element main axis bora bor movement korbe
+
+                    ii. cross axis:
+                        -> 
+
+            4. flex-direction:
+            
+                flexbox mainly by default x axis or row wise movement hoy.
+                flexbox er ei direction ta control kora jay flex-direction property diye
+
+                    i. flex-direction by default row thake.[kichu na dile o etai thake by default]
+                    ii. flex-direction reversely row korle right to left movement korbe
+                    iii. jodi amra webpage ke default system ke ultai dei tahole 
+                        flex-direction col use korle... 
+                            1. main axis cole jabe niche
+                            2. cross axis cole jabe upore
+
+                            jehetu webpage main axis borabor movement kore so element gula
+                            tokho left to right movement na hoye top to bottom movement korbe
+
+                    iv. ekn jodi reversely col kori tahole webpage movement korbe bottom to top
+                        wise.
+
+                summary: amader flexbox use er smy mone rakhte hobe webpage by defaultly 
+                    x axis or row wise movement kore but user caile flex-direction use kore
+                    webpage er movement customize korte pare.
+
+            5. flex-wrap:
+
+                1. jodi kunosomoy element eto beshi hoye jay j container
+                    er width ved kore cole jay but nice name na. orthat overflow 
+                    hoy tahole by default flex box no wrap kore rakhe. But oi j overflow
+                    hole wrap hobe ki na seta control kora hoy flex-wrap property diye
+
+                    . By default flex-wrap: no-wrap thakay flexbox wrap kore na.
+
+                    . jodi user flex-wrap:wrap kore tahole container a jototuk jayga dorbe na
+                        seta automatically nice wrap hoye hoye set hobe
+                    -> wrap houk r na houk webpage er movement/flow same thakbe orthat main axis wise
+
+
+                        i. wrap-reverse use korle ekdom nic theke start hobe (if flex-direction: row)
+
+            *** flex-direction + flex-wrap = flex-flow
+
+            6. flex-flow property
+                *** syntax: flex-flow: flex-direction flex-wrap;
+                    example: flex-flow: row wrap
+
+
+            another topic
+            ~ main axis wise alignment:
+
+                * main axis alignment er jonno use hoy justify-content property
+                1. by default alignment left thake. value ta evabe set thake
+                    justify-content: flex-start.
+
+                2. space-around: carpase space diye align kore
+                3. space-between: carpase na just duita element er majkhane space diye align kore
+                4. space-evenly: carpase equal space niye align kore dibe. 
+                    remember:
+                        1. around carpase space diye align kore
+                        2. evenly carpase equally space diye align kore
+
+                
+                    * space-evenly ekta axis wise equal space dey and align kore
+                
+                    -> justify content hocche simply main axis wise amader j content ta 
+                    ache, sei content tar moddhe asole j poriman remaining space ache
+                    sei space gula kivabe distribute hobe seta se hocche define kore.
+                    ar eta korte gelei se move kore actually align kore r ki.
+
+            another topic
+            ~ cross axis wise alignment:
+                -> cross axis alignment er jonno use hoy align-items property
+                    1. by default value thake stretch
+                        * jehetu property er nam item so eta full content niye kaj kore na.
+                            item niye kaj kore and first row ke ekta item and second row ke arekta 
+                            item hisebe dore then kaj kore. direction jodi col hoy tahole row er jaygay
+                            simply col dore kaj korbe.
+                            But main axis a justify content use hoito jeta full content niye kaj korto.
+
+                    2. flex-start: flex er start theke shuru hobe
+                    3. flex-end: flex er end theke shuru hobe
+                    4. center: center a cole jabe item gula
+
+            *** summary:
+                1. align-itmes muloto cross axis wise justify content dorte pari amra
+                ii. content na item niye kaj kore
+                iii. nijeder items area niye kaj kore
+                    areas:
+                        i. flex-start(items er shurur line)
+                        ii. flex-end(items er shes line)
+                        iii. center(items er majkhaner line)
+
+            ~ another topic:
+                align-content:
+                    value-
+                        i. baseline:
+                            -> child div chuto hoye jabe and jototuku
+                                jayga dorkar tototuk jayga nibe
+                        
+                        ii. flex-start:
+                            -> child div gula upore cole asbe
+
+                        iii. flex-end:
+                            -> child div gula nice cole jabe
+
+                        iv. center
+                            -> child div gula middle a cole asbe
+
+                        v. space-between:
+                            -> child div gula upor o nice dui line a part hoye jabe space niye
+
+                        vi. space-around;
+                            -> child div gula upor o nice dui line a asbe and upor and nice equal space nibe
+
+                        vii. space-evenly:
+                            -> child div gula upore and niche dui lilne a asbe tar sathe
+                                upor nic and middle a equal space nibe
+
+
+                    ** value hisabe 
+                        1. flex-start
+                        2. flex-end
+                        3. center
+                                - ei 3 ta use korei maximum kaj kore fela jay
+
+                    proved:
+
+                        1. space-evenly and space-around er kaj center kore dite pare
+                        2. space between er kaj kore dey flex-start
+
+
+                remember: flex-wrap:wrap use korle sobai equal height pabe
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox-Container-Properties-and-Values</title>
+    <style>
+        .container {
+            display: flex;
+            /* flex-direction:column-reverse; */
+            /* flex-wrap: wrap-reverse; */
+            justify-content: flex-end;
+        }
+
+
+        /* understanding align-content */
+        .parent {
+
+            border: 10px solid black;
+            width: 550px;
+            height: 550px;
+            margin: 15px auto;
+            padding: 5px;
+            border-radius: 5px;
+
+
+            /* display:flex use korle child div pasapasi cole ase*/
+            display: flex;
+
+            /* flex-wrap:wrap use kora mane child div gula jototuku space dorkar nibe then nice wrap hobe bakigula */
+            flex-wrap: wrap;
+
+            align-content: center;
+        }
+
+
+        .child-div1 {
+
+            background-color: tomato;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div2 {
+
+            background-color: green;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div3 {
+
+            background-color: red;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+
+        .child-div4 {
+
+            background-color: blue;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+
+        .child-div5 {
+
+            background-color: #5DAA00;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div6 {
+
+            background-color: #0078D7;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div7 {
+
+            background-color: navy;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div8 {
+
+            background-color: #EE4023;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div9 {
+
+            background-color: #FFD141;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div10 {
+
+            background-color: #107C10;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div11 {
+
+            background-color: #58A800;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div12 {
+
+            background-color: #3A3A3A;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        /* .child-div13 {
+
+            background-color: #58A800;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div14 {
+
+            background-color: blue;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .child-div15 {
+
+            background-color: #107c10;
+            padding: 5px;
+            color: white;
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="item-one">1</div>
+        <div class="item-two">2</div>
+        <div class="item-three">3</div>
+        <div class="item-four">4</div>
+    </div> -->
+
+
+    <!-- align-content understanding -->
+    <div class="parent">
+        <div class="child-div1">Div1</div>
+        <div class="child-div2">Div2</div>
+        <div class="child-div3">Div3</div>
+        <div class="child-div4">Div4</div>
+        <div class="child-div5">Div5</div>
+        <div class="child-div6">Div6</div>
+        <div class="child-div7">Div7</div>
+        <div class="child-div8">Div8</div>
+        <div class="child-div9">Div9</div>
+        <div class="child-div10">Div10</div>
+        <div class="child-div11">Div11</div>
+        <div class="child-div12">Div12</div>
+        <!-- <div class="child-div13">Div13</div>
+        <div class="child-div14">Div14</div>
+        <div class="child-div15">Div15</div> -->
+    </div>
+</body>
+
+</html>
+
+
+
+<!--
+    learning: 
+        1. display property
+        2. flex direction property
+            value-
+                i. row
+                ii. row-reverse
+                iii. column
+                iv. column-reverse
+
+        3. flex-wrap property
+            value-
+
+            . case1: flex-direction(row)
+                i. nowrap (default)
+                ii. wrap
+                iii. wrap-reverse
+
+            .. case2: flex-direction(col)
+                i. nowrap (default)
+                ii. wrap
+                iii. wrap-reverse
+
+        4.
+            i. main axis wise alignment (use hoy -> justify-content property)
+                - case1 : direction-> row
+                    1. justify content property
+                        value
+                            i. flex-start(left basically and eta default system)
+                            ii. flex-end
+                            iii. center
+                            iv. space-around
+                            v. space-between
+                            vi. space-evenly
+
+                - case2 : direction-> col
+                    1. justify content property
+                        value
+                            i. flex-start(left basically and eta default system)
+                            ii. flex-end
+                            iii. center
+                            iv. space-around
+                            v. space-between
+                            vi. space-evenly
+
+            ii. cross axis wise alignment(use hoy: align-items property)
+                case-1: direction -> row  
+                    1. align-items property
+                            value
+                                i. stretch(by default) [lws vdo theke bujbo er kaj]
+                                ii. flex-start
+                                iii. flex-end
+                                iv. center
+
+                case-2: direction -> col  
+                    1. align-items property
+                            value
+                                i. stretch(by default) [lws vdo theke bujbo er kaj]
+                                ii. flex-start
+                                iii. flex-end
+                                iv. center
+
+        5. align-content property:
+            just 3 ta mone rakhbo bakigula kaje lage na
+                i. flex-start 
+                ii. flex-end
+                iii. center
+
+-->
