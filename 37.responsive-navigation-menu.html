@@ -1,0 +1,85 @@
+<!-- 
+    note: 
+        1. first a normal navbar create korbo
+        2. Then seta ke responsive korbo
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating responsive navigation menu</title>
+    <style>
+        
+        /* creating and styling normal navbar */
+        .menu {
+
+            background-color: cadetblue;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .menu a {
+
+            text-decoration: none;
+            padding: 20px;
+            color: white;
+        }
+
+        .menu a:hover {
+
+            background-color: gray;
+            cursor: pointer;
+        }
+
+        /* convert normal navbar to responsive navbar */
+        @media screen and (max-width: 600px){
+
+            .menu {
+
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .menu a {
+
+                background-color: indigo;
+                margin: 10px 0px;
+
+                /* centerize */
+                /* way1 */
+                text-align: center;
+                /* way 2 */
+                /* display: flex;
+                justify-content: center; */
+                align-items: center;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- container -->
+    <div class="navbar">
+        <!-- content under container -->
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Tutorial</a>
+            <a href="#">About me</a>
+            <a href="#">Contact me</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    learning: 
+        1. creating navbar
+        2. convert normal navbar to responsive navbar
+-->
