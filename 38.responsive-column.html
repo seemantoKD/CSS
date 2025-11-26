@@ -1,0 +1,132 @@
+<!--
+    note: 
+
+        1. onek somoy ekti row or multiple column songkhake handle
+        korar proyojon hote pare. Like different different screen
+        size er jonno hoytoba ekti row er column number ke control
+        kora lagbe. 
+
+        for example:
+            i. boro screen er jonno ekti row ke 4 ti column a part korbo
+            ii. chuto screen er jonno ekti column thakbe
+            iii. medium screen er jonno duita column thakbe ekti row te
+
+        *** ei kaj ta duivabe kora jay
+            1. using flot
+            2. using flex-layout
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Column Design</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+
+        /* way1-> using float */
+        /*
+        .column {
+
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        
+        @media screen and (max-width: 992px) {
+            
+            .column {
+
+                float: left;
+                width: 50%;
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            
+            .column {
+
+                width: 100%;
+            }
+        } */
+
+
+        /* way2 -> using flex-box */
+        .row {
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+
+            flex: 25%;
+            padding: 10px;
+        }
+
+        /* responsive for different screen size */
+        @media screen and (max-width: 992px) {
+
+            .column {
+
+                flex: 50%;
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+
+            .column {
+
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <h1>HTML</h1>
+            <p>HTML helps structure content for webpages using tags and attributes properly</p>
+        </div>
+
+        <div class="column">
+            <h1>CSS</h1>
+            <p>CSS styles web pages by controlling layout, colors, spacing, and design</p>
+        </div>
+
+
+        <div class="column">
+            <h1>JS</h1>
+            <p>JavaScript adds interactivity to webpages by manipulating elements dynamically in browsers</p>
+        </div>
+
+        <div class="column">
+            <h1>Bootstrap</h1>
+            <p>Bootstrap simplifies responsive web design using prebuilt components and flexible utilities</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<!--
+    learning: 
+        1. responsive column design using -
+            i. float (eta outdated)
+            ii. flex-boxn(eta recomended)
+-->
