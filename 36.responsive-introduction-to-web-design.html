@@ -1,0 +1,73 @@
+<!--
+    note:
+        1. responsive er kaj korar smy always uporer dike boro 
+            size gula thakbe then cuto size gula. [max-width er case a]
+
+        2. responsive er kaj korar smy always uporer dike cuto 
+            size gula thakbe then boro size gula. [min-width er case a]
+
+        3. user caile responsive er kaj external css use kore korte pare
+            se ketre nicer kaj korte hobe
+
+                i. css file ke access korbo html theke
+                    *. style.css er moto link korbo
+                    *. But ekta extra kaj j kokhon use korbo seta o bole dite hobe media property use kore
+                    *. syntax:
+                        <link rel="stylesheet" media="screen and(max-width: 990px)" href="mobile.css"> </link>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to RWD</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 700px){
+            body {
+                background-color: brown;
+            }
+
+            h1 {
+                color: white;
+            }
+
+            h2 {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            body {
+                background-color: cadetblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bangladesh</h1>
+    <h2>Responsive Web Design</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et delectus quae mollitia labore minima maiores magni illum perspiciatis, inventore vel.</p>
+
+
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    learning:
+        1. @media screen
+        2. externally responsive kora media property use kore
+-->
