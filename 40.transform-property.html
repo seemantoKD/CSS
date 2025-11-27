@@ -1,0 +1,151 @@
+<!--
+    note:
+    
+        1. transform property er sathe besh koyekta function use kora jay: 
+
+            i. translate(x,y)
+                -> ei function value hisabe x and y axis er value recieve kore
+            
+                -> duita value dite hoy x axis and y axis er jonno
+
+                -> practically dekha lagbe bujte hole
+
+            ii. scale(number)
+                -> scale function jekunu number recieve kore. Number
+                    float o hote pare abar int o hote pare.
+                
+                -> ei scale function er vitore joto value dea hobe and 
+                    jar upor apply kora hobe take orginal look er theke
+                    totogun boro dekhabe.
+
+            iii. rotate(degree)
+                -> ei function degree recieve kore value hisabe
+
+                -> rotate function a joto degree deya hobe seta toto degree angle hoye jabe
+
+                -> rotate a -ve val use korle ulta dik theke rotate hobe
+
+            iv. skew(degree) / skewX() / skewY()
+
+                -> eta o degree recieve kore value hisabe
+
+                -> rotate er motoi , eta practically dekhte hobe
+
+
+        *** user caile eksathe multiple function use korte parbe
+            transform property er value hisabe.
+
+
+        * block element hole element ke center a anar jonno margin: 0 auto use kori
+        * inline element er jonno parent er text-align: center korte hoy
+
+
+        * transition je kaj ta kore -> user j kaj ta korte cay
+            seta user er deya time er poriman somoy niye kore
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Property</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+
+        #div1 {
+
+            height: 200px;
+            width: 200px;
+            background-color: black;
+
+            /* block element ke center kora */
+            /* way1 -> using margin */
+            margin: 0 auto;
+
+
+            margin-top: 200px;
+
+            transition: 3s;
+
+
+            /* way2 -> using flex */
+            /* i. jake center korte cai tar ekta parent lagbe 
+               ii. parent ke access er maddome parent er child jake center krte 
+                cai tar justify-content and align-items center korte hobe */
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        /* element center using flex
+        .container {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+
+        /* using transform property and function */
+        #div1:hover {
+
+            /* using scale function */
+            /* transform: scale(1.5); */
+
+            /* using rotate function */
+            /* transform: rotate(360deg); */
+
+            /* using skew function */
+            /* transform: skew(-15deg); */
+
+            /* using translate function */
+            transform: translate(150px, 250px);
+
+            /* multiple function use at a time */
+            /* transform: scale(1.5) rotate(360deg) skew(-15deg) translate(10px, 15px); */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- for flex
+    <div class="container">
+        <div id="div1">
+        
+        </div>
+    </div> -->
+
+    <div id="div1">
+        <h1 style ="color:white; text-align: center;">Bangladesh</h1>
+    </div>
+</body>
+
+</html>
+
+
+
+<!--
+    learning:
+
+        1. element ke center kora 
+            i. way1 -> using margin
+            ii. way2 -> using flex
+
+        # transition property
+
+        2. transform property
+            1. scale function
+            2. rotate function
+            3. skew function
+            4. translate function
+
+        **** at a time multiple function transform er value hisabe use kora
+-->
