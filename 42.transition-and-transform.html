@@ -1,0 +1,160 @@
+<!--
+    note:
+
+        - CSS Transform: 
+            
+            1. Transform-
+                i. ekta element kemon dekhabe/kuthay thakbe seta change kore
+                ii. Transform = element কে ঘোরানো, বড়/ছোট করা, সরানো ইত্যাদি।
+                iii. এটা layout change করে না, শুধু element visually বদলায়।
+
+                # Transform-এর সবচেয়ে বেশি ব্যবহার হওয়া ৫টা ফাংশন:
+                    i. translate() → element কে ডানে-বামে / উপরে-নিচে সরানো
+                    ii. scale() → বড় বা ছোট করা
+                    iii. rotate() → ঘোরানো
+                    iv. skew() → হেলানো
+                    v. multiple transform একসাথে
+                        example: transform: translateX(20px) rotate(30deg) scale(1.2);
+
+
+        - CSS Transition: 
+
+            2. Transition-
+                i. Transform তো কাজ করবে, কিন্তু smooth motion হবে না।
+                    -> Smooth animation চাইলে transition লাগবে।
+
+                ii. transition ki kore?
+                    => i. একটা প্রপার্টির মান পরিবর্তন হলে সেটা smooth করে।
+                       ii. Ex: hover করলে box বড় হবে… হঠাৎ না হয়ে ধীরে ধীরে হবে।
+
+                # Transition-এর 3 main property
+                    i. transition-property → কোন property animate হবে
+                    ii. transition-duration → কত সময় লাগবে
+                    iii. transition-timing-function → motion কেমন হবে (linear/ease/ease-in-out)
+
+
+        - Transform VS Transition:
+            1. Transform element ke change kore (like: move/rotate/scale)
+                ar transition changes ke smooth kore.
+
+            2. Transform nije animation dey na but transform er changes 
+                smooth kore.
+
+            3. Transformation -> sudden change but transition -> smooth motion
+
+        - Transition adding
+            1. Transition add korar jonno transition property use 
+                kore bole dite hobe kiser transition dekhte cai. Like width er
+                transition dekhte cai. Tahole 
+                    -> transition-property: width; 
+                    
+            2. Transition duration use kore bole dite pari koto somoy
+                dore transition ta hobe.
+
+            3. Tarpor bolte hobe transition a ki hobe.
+
+
+            # transition delay use kore bole deya jay koto smy pore transition
+                ta start hobe.
+
+            # transition timing function use kore bole dite pari 
+                kun speed ba kivabe in and out hobe transition ta.
+
+            # Just transition use kore eksathe multiple transition propertyr
+                value set kora jay.
+
+
+            * user caile transition er sathe rotate orthat transform
+                o apply korte pare.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and Transform</title>
+    <style>
+        .main {
+
+            background-color: tomato;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            text-align: center;
+            /* transition-property: width;
+            transition-duration: 2s; */
+            /* hover korar ek scnd por transition shuru hobe */
+            /* transition-delay: 0.5s;
+            transition-timing-function: linear; */
+
+            /* multiple value in transition property */
+            /* transition: height 2s linera 0.5s; */
+
+
+
+            /* transition with transform */
+            transition: width 2s, transform 2s;
+
+        }
+
+        /* main div er sathe transition add */
+        /* .main:hover {
+
+            height: 400px;
+        } */
+
+
+        /* transition with transform */
+        .main:hover {
+
+            width: 400px;
+            /* rotate hobe */
+            transform: rotate(360deg);
+        }
+
+
+        /* heading er sathe transition adding */
+        h1 {
+
+            font-size: 2.5rem;
+            color: white;
+            text-align: center;
+            transition: font-size 2s;
+        }
+
+        h1:hover {
+
+            font-size: 3rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <h1>Bangladesh</h1>
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+<!--
+    learning:
+        1. transition-property
+        2. transition-duration
+        3. transition-delay
+        4. tranisition-timing-function
+        5. transition property te multiple value use 
+        6. transition with transform use case 
+-->
