@@ -1,0 +1,183 @@
+<!--
+    note:
+        1. element center 
+            i. block element: 
+                -> margin: 0 auto;
+
+            ii. inline element: 
+                -> display: block;
+                -> margin: 0 auto;
+
+        2. animation add korar step 
+            i. animation name property use kore animation er nam
+                diye dite hobe.
+
+                **** NB: animation er nam user er icchamoto dite parbe
+
+            ii. animation ta kotosomoy thakbe tar jonno time duration bole dite hobe
+                animation duration property use kore.
+
+
+            iii. then animation create korte hobe. Animation create korar jonno:
+                i. @jeframes animationName {
+                    // animation a ja ja korar iccha ta add kora
+                }
+
+        3. hover korle animation dekhte caile hover er vitore 
+            animation er nam and duration diye dite hobe
+
+        4. from to use kore animation er prothome ki thakbe and 
+            shese ki dekhabe eta define kore deya jay.
+
+        5. last er orthat 100% er smy animation by default reset 
+            hoye jay. oi by default reset remove kore red dekhar 
+            jonno use korbo animation-fill-mode:forward;
+
+
+        6. image ke caile user movement korate pare left to right or etc to etc
+        7. animation by default theme jay. So animation ke running rakhar jonno
+            use korte hoy animation-iteration-count property.
+                value hisabe x dibo. x -> kotobar animation hobe
+
+        8. animation er speed control korar jonno animation timing property 
+            use kora jay.
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Property</title>
+    <style>
+        * {
+
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        img {
+
+            max-width: 200px;
+            height: auto;
+            border: 5px solid black;
+            display: block;
+            margin: 0 auto;
+
+            margin-top: 100px;
+            border-radius: 60%;
+
+            /* for movement in image */
+            position: relative;
+            animation-name: img-anim;
+            animation-duration: 1s;
+            animation-iteration-count: 3;
+            /* asa jawar speed same thakbe linear use er jonno */
+            animation-timing-function: linear;
+
+        }
+
+
+        /* img:hover { */
+
+        /* using animation property */
+        /* step i -> animation er nam deya */
+        /* animation-name: img-anim; */
+        /* step ii -> animation duration deya */
+        /* animation-duration: 3s; */
+        /* using animation-fill-mode: forward */
+        /* animation-fill-mode: forward;
+        } */
+
+        /* step iii -> create animation */
+        @keyframes img-anim {
+
+            /* from means present condition */
+            /* from {
+
+                max-width: 200px;
+                border-color: orange;
+            } */
+
+            /* to means ekn ki dekhabe */
+            /* to {
+
+                max-width: 300px;
+                border-color: red;
+            } */
+
+            /* using percentage */
+            /* 0% {
+
+                max-width: 200px;
+                border: 5px solid orange;
+            }
+
+            50% {
+
+                max-width: 300px;
+                border: 5px solid green;
+            }
+
+            100% {
+
+                border: 5px solid red;
+            } */
+
+
+            /* for movement */
+            0% {
+
+                top: 0;
+                left: 0;
+            }
+
+            50% {
+
+                top: 100px;
+                left: 0;
+                opacity: 0.5;
+            }
+
+            100% {
+
+                top: -100px;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="19.bg-image.jpg" alt="image not found">
+</body>
+
+</html>
+
+
+
+
+
+
+<!--
+    learning:
+        1. element center for
+            i. inline element 
+                * display: block;
+                * margin: 0 auto;
+            ii. block element
+                * margin: 0 auto;
+
+        2. animation property
+        3. hover a add kora animation
+        4. from and to use case
+        5. from and to er bodole % o use kora jay
+        6. animation-fill-mode:forward use case
+        7. animation-iteration-count property
+        8. animation-timing-function property
+-->
