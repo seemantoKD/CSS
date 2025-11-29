@@ -1,0 +1,132 @@
+<!--    
+    note:
+
+        1. table er even and odd row er jonno aladavabe color set korte hole
+            i. tr:nth-child(even) {
+                // je kaj korte cai
+            }
+
+            ii. tr:nth-child(odd) {
+                // je kaj korte cai
+            }
+
+        2. vertical-align property:
+            . value-
+                i. top
+                ii. bottom
+                iii. middle -> eta text-align: center er moto kaj kore
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table styling</title>
+
+    <style>
+        table {
+
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+
+            border: 2px solid black;
+            padding: 5px;
+            text-align: center;
+
+            /* text-align: center; */
+            vertical-align: middle;
+        }
+
+        th {
+
+            background-color: darkgreen;
+            color: white;
+            height: 30px;
+        }
+
+        tr:hover {
+
+            background-color: tomato;
+        }
+
+        tr:nth-child(even) {
+
+            background-color: green;
+        }
+
+        tr:nth-child(odd) {
+
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>Student Details</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>GPA</th>
+                <th>Bio</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Seemanto Kumar Dash</td>
+                <td>3.5</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, fugiat? </td>
+                <td>01710837456</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Ritu</td>
+                <td>4</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, fugiat? </td>
+                <td>01619037489</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Linkon</td>
+                <td>4</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, fugiat? </td>
+                <td>01910478456</td>
+            </tr>
+            <tr>
+                <td>104</td>
+                <td>Mondira</td>
+                <td>3.5</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, fugiat? </td>
+                <td>0139087556</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+
+
+
+
+<!-- 
+    learning:
+        1. even odd row ke aladavabe style kora
+        2. vertical-align property
+            - value
+                i. top 
+                ii. bottom
+                iii. middle
+-->
