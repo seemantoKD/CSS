@@ -1,0 +1,95 @@
+<!--
+    note:
+        1. icon use korte caile google icon a giye search korbo.
+        2. background-image and url use kre apply kore dibo
+        3. background repeat none kore dibo
+
+        **** animated icon-
+            # er jonno focus somporke jante hobe
+            # focus means click korar pore ki obosthay thakbe kunu
+                kichu seta.
+
+            -> animation er jonno first kaj hocche jar upor animation
+                korbo take select kore -
+                    i. width dite hobe
+                    ii. transition property use kore-
+                        1. width 
+                        2. koto smy animation hobe
+                        3. effect ta ki hobe(linear/ease-in-out etc)
+                                                                - bole dite hobe.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Style</title>
+    <style>
+
+        input[type=text] {
+
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin: 20px 0;
+            box-sizing: border-box;
+
+            border: 3px solid salmon;
+            border-radius: 5px;
+
+            /* border: none;
+            border-bottom: 3px solid salmon; */
+
+            background-color: seagreen;
+        }
+
+        #search {
+
+            background-image: url(46.search.png);
+            background-repeat: no-repeat;
+            background-position: 8px 10px;
+            
+            font-size: 1rem;
+            padding: 15px 40px;
+            background-color: white;
+
+            /* using animation on the icon */
+            width: 150px;
+            transition: width 0.3s ease-in-out;
+        }
+
+        #search:focus {
+
+            /* animation adding after focus on search */
+            background-color: sienna;
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="">
+
+        <input type="text" name="search" id="search" placeholder="search">
+        <br>
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname">
+
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname">
+
+        
+
+    </form>
+</body>
+
+</html>
+
+<!--
+    learning:
+        1. form er text fill a icon apply/use.
+        2. icon er upor animation kora
+-->
