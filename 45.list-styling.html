@@ -1,0 +1,134 @@
+<!-- 
+    note: 
+        1. user caile by default list er theke user er cahida 
+            moto style korte pare list ke. Ejonno list styling
+            somporke jante hoy.
+
+        2. list style er jonno onekgula property ache:
+            i. list-style-type
+                value-
+                    1. square
+                    2. circle
+                    3. disc and etc
+
+            ii. list-style-position
+                value-
+                    1. inside -> vitorer dike cole ase/jay
+                    2. outside (eta by default e thake) and etc
+
+            iii. list-style-image
+                value-
+                    1. url er vitor link diye dite hobe 
+
+            *. eksathe ei 3 ta property list-style propertyr sahajje
+                value hisabe diye dite pari.
+                    syntax :
+                        list-style: url("...") inside circle
+
+
+        3. Sundor kore list ke customize korar jonno font awesome er 
+            help neya jay. jeta part 2 hisabe consider kore code likhbo.
+
+            -> remember : font awesome theke icon set korar age amader cdn
+                set korte hobe.
+
+            cdn add korar step:
+                i. font awseome cdn likhe google search
+                ii. onekgula link asbe but amra copy link tag dibo
+                    jetar extensiton hobe all.min.css
+                iii. then style tag er age bosiye dibo link ta
+
+        4. font awesome er icon gula amra li tag er age bosate cai e jonno use korbo 
+            before pseudo class ta.
+
+        5. course-list :: before {
+            
+            // er vitore ja use hoiise sob tutorial dekhe bujbo jodi
+                na buje thaki tahole
+        }
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Styling</title>
+
+    <!-- adding font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .course-list {
+
+            background-color: rgb(216, 28, 28);
+            padding: 20px;
+            color: white;
+        }
+
+
+        /* list styling part 1*/
+        /* .course-list ul { */
+
+            /* list-style-type: circle;
+            list-style-position: inside;
+            list-style-image: url("45.tick.png"); */
+
+            /* uporer 3 ta eksathe use */
+            /* list-style: url("45.tick.png") inside circle;
+        } */
+
+
+        /* list styling part 2 using font awesome */
+        .course-list ul {
+
+            list-style: none;
+        }
+
+        .course-list li {
+
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .course-list li::before {
+
+            /* font awesome theke copy cora url bosabo content er maje */
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: bold;
+
+            display: inline;
+            margin: 10px 5px;
+            font-size: 2rem;
+            color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="course-list">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind</li>
+            <li>Bootstrap</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    learning: 
+        1. list-style-property
+        2. list-style-position
+        3. list-style-image
+        4. font awesome website er cdn link kora
+        5. content property
+
+        * mainly list style korar duita system shikhlam
+            1. using font-awesome website
+            2. without using font-awesome website
+-->
